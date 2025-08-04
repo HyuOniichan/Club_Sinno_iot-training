@@ -5,7 +5,11 @@
 - [Table of Contents](#table-of-contents)
 - [Meetings](#meetings)
   - [Buoi 1 (27/7/2025)](#buoi-1-2772025)
+    - [Tasks](#tasks)
+    - [Files](#files)
   - [Buoi 2 (30/7/2025)](#buoi-2-3072025)
+    - [Tasks](#tasks-1)
+    - [Files](#files-1)
 - [Tai lieu lien quan](#tai-lieu-lien-quan)
 
 
@@ -17,13 +21,26 @@
 
 ### Buoi 1 (27/7/2025)  
 
+#### Tasks
+
 1. Cài đặt EMQX Broker trên Docker  
 `docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8084:8084 -p 8883:8883 -p 18083:18083  emqx:5.8.5`
 2. Tìm hiểu MQTT 
 
+#### Files 
+
+- Path: `src/b1/`
+- `main.js` 
+  - Setup MQTT params 
+  - Establish MQTT connection
+  - Subcribe, Publish and Disconnect 
+
+
 <a name="b2"></a>>
 
 ### Buoi 2 (30/7/2025)  
+
+#### Tasks
 
 1. Nắm rõ được cách hoạt động của MQTT, hiểu được broker, topic, publisher và subcriber là gì?
 2. Tìm hiểu thêm về QoS trong MQTT
@@ -31,12 +48,18 @@
    - Yêu cầu cơ bản: code giả lập 1 publisher và 2 subcriber để chạy thử trên cùng 1 máy, các em có thể quan sát trạng thái kết nối của các client trên địa chỉ localhost:18083 khi chạy EMQX bằng Docker.  
    - Yêu cầu nâng cao: 1 publisher và 1 subcriber ở 2 máy vật lý khác nhau có thể bắn và lắng nghe tin nhắn được, việc này yêu cầu máy tính của subcriber phải biết được IP của máy tính chạy EMQX Broker và port 1883 phải được mở, các em sẽ thiết lập inbound và outbound rule trên máy chứa broker.
 
+#### Files
 
+- Path: `src/b2/`
+- `config.js` - MQTT params 
+- `pub1.js` - Publisher 1
+- `sub1.js` - Subcriber 1 
+- `sub2.js` - Subcriber 2 
 
 
 <a name="resource"></a>
 
 ## Tai lieu lien quan  
 - Thong tin du an: [Google Docs](https://docs.google.com/document/d/11dvZJWpjWVFPlbXF0WgX3hBHGRbl80fCsNnWCCyS8T0/edit?usp=sharing)
-
+- MQTT with Node.js: [Tutorial Blog](https://www.emqx.com/en/blog/how-to-use-mqtt-in-nodejs)
 

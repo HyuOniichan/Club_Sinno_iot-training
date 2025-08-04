@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:b1": "node src/b1/main.js", 
+    "dev:b2:sub1": "node src/b2/sub1.js",
+    "dev:b2:sub2": "node src/b2/sub2.js",
+    "dev:b2:pub1": "node src/b2/pub1.js"
   },
   "keywords": [],
   "author": "",
