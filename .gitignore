@@ -1,2 +1,5 @@
 /node_modules
 .env
+
+# b3 
+src/b3/config.h

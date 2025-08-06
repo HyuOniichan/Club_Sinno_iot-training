@@ -10,6 +10,10 @@
   - [Buoi 2 (30/7/2025)](#buoi-2-3072025)
     - [Tasks](#tasks-1)
     - [Files](#files-1)
+  - [Buoi 3 (5/8/2025)](#buoi-3-582025)
+    - [Tasks](#tasks-2)
+    - [Files](#files-2)
+    - [Devices](#devices)
 - [Tai lieu lien quan](#tai-lieu-lien-quan)
 
 
@@ -57,9 +61,37 @@
 - `sub2.js` - Subcriber 2 
 
 
+<a name="b3"></a>
+
+### Buoi 3 (5/8/2025) 
+
+#### Tasks 
+
+1. Tìm hiểu về Background Service, hiểu được sự khác nhau giữa Background Service và Web API là như nào ?
+2. Từ assignment anh giao hôm trước, chúng mình sẽ nâng cấp lên:
+  - Publisher của chúng ta là 1 cảm biến nhiệt độ, cảm biến này sẽ bắn bản tin chứa nhiệt độ lên 1s/lần
+  - Subcriber của chúng ta là 1 bg service xử lý thông tin cảm biến bắn qua topic, nếu nhiệt độ vượt quá mức cho phép VD như 36 độ C chẳng hạn, sẽ hiển thị lên màn hình console tbao
+
+#### Files
+
+- Path: `src/b3/`
+- `config.js` - MQTT params
+- `pub.js` - Publisher (Testing purpose) 
+- `background-service.js` - Subcriber (work as background service) 
+- `distance-sensor.ino` - Logic for ESP32 handle calculating and publishing distance
+- `config-sample.h` - Template for `config.h`, includes WiFi and MQTT setup
+
+#### Devices 
+- ESP32 Devkit V1 
+- Ultrasonic Distance Sensor HC-SR04
+
+
+
+
 <a name="resource"></a>
 
 ## Tai lieu lien quan  
 - Thong tin du an: [Google Docs](https://docs.google.com/document/d/11dvZJWpjWVFPlbXF0WgX3hBHGRbl80fCsNnWCCyS8T0/edit?usp=sharing)
 - MQTT with Node.js: [Tutorial Blog](https://www.emqx.com/en/blog/how-to-use-mqtt-in-nodejs)
+- MQTT Temperature example: [Github Repo](https://github.com/gabrielboliveira/mqtt-temperature)
 
